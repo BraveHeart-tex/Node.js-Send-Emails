@@ -27,6 +27,29 @@ const sendEmail = async (req, res) => {
   res.json(info); // You don't have to send the info.
 };
 ```
+```js
+const sendEmailEthereal = async (req, res) => {
+  let testAccount = await nodemailer.createTestAccount();
+
+  const transporter = nodemailer.createTransport({
+    host: 'smtp.ethereal.email',
+    port: 587,
+    auth: {
+      user: 'jarred.goyette5@ethereal.email',
+      pass: 'u8v8Nvy4mTvqU35M8E',
+    },
+  });
+
+  let info = await transporter.sendMail({
+    from: 'Bora Karaca <boraKaraca.dev@gmail.com>',
+    to: 'bora.karaca@ogr.iu.edu.tr',
+    subject: 'Hello,',
+    html: '<h2>Sending Emails with Node.js :D</h2>',
+  });
+
+  res.json(info);
+};
+```
 
 ### End Result
 
