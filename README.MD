@@ -51,6 +51,6 @@ const sendEmailEthereal = async (req, res) => {
 };
 ```
 
-### End Result
+### End Result with SendGrid
 
 ![end result of sending an email](/test.png 'Result')
