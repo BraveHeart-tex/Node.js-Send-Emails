@@ -33,7 +33,7 @@ const sendEmail = async (req, res) => {
     html: '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, facere.</p>',
   };
   const info = sgMail.send(msg);
-  // res.json(info);
+  res.json(info);
 };
 
 module.exports = sendEmail;
